@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "pnpm build",
+    "export": "next export",
     "deploy": "gh-pages -d .next"
   },
   "dependencies": {

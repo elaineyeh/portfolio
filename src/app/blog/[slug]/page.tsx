@@ -1,10 +1,19 @@
-import { getPost } from "@/data/blog";
+import { getPost, getBlogPosts } from "@/data/blog";  // 確保你有 `getBlogPosts` 函數來獲取所有文章
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+// 靜態生成所有文章的路由
+export async function generateStaticParams() {
+  const posts = await getBlogPosts(); // 獲取所有文章
+  return posts.map((post) => ({
+    slug: post.slug,  // 這是用來生成靜態頁面的參數
+  }));
+}
+
+// 生成頁面的 metadata
 export async function generateMetadata({
   params,
 }: {
@@ -12,15 +21,15 @@ export async function generateMetadata({
     slug: string;
   };
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  const post = await getPost(params.slug);  // 根據 slug 獲取具體文章
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  const ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
@@ -46,6 +55,7 @@ export async function generateMetadata({
   };
 }
 
+// Blog 頁面，顯示單篇文章的內容
 export default async function Blog({
   params,
 }: {
@@ -53,10 +63,10 @@ export default async function Blog({
     slug: string;
   };
 }) {
-  let post = await getPost(params.slug);
+  const post = await getPost(params.slug);  // 根據 slug 獲取文章內容
 
   if (!post) {
-    notFound();
+    notFound();  // 如果找不到文章，顯示 404
   }
 
   return (
