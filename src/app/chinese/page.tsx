@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { DATA } from "@/data/resume";
+import { DATA } from "@/data/chinese";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -22,7 +22,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                text={`嗨，我是${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -41,7 +41,7 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold">關於</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
@@ -52,7 +52,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <h2 className="text-xl font-bold">工作經歷</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -77,7 +77,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Freelance Experience</h2>
+            <h2 className="text-xl font-bold">接案經歷</h2>
           </BlurFade>
           {DATA.freelance.map((freelance, id) => (
             <BlurFade
@@ -102,7 +102,7 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
+            <h2 className="text-xl font-bold">學歷</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
@@ -126,7 +126,7 @@ export default function Page() {
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <h2 className="text-xl font-bold">技能</h2>
           </BlurFade>
           <div className="flex flex-col gap-y-2">
             {DATA.skills.map((row, rowIndex) => (
@@ -147,15 +147,13 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  作品集
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  查看我的最新作品
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  曾參與過各種專案，從簡單的網站到複雜的網路應用程式，以下是一些我喜愛的專案。
                 </p>
               </div>
             </div>
@@ -232,21 +230,20 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
+                聯絡方式
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
+                保持聯繫
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm with a direct question on{" "}
+                歡迎聯絡我討論合作事宜，您可以直接在{" "}
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
                   className="text-blue-500 hover:underline"
                 >
-                   LinkedIn
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                  Twitter 
+                </Link>
+                上私訊我，我會在方便時回覆。但請注意，我不會回應任何推銷訊息。
               </p>
             </div>
           </BlurFade>

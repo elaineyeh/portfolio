@@ -15,7 +15,7 @@ export default async function BlogPage() {
   return (
     <section>
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
+        <h1 className="font-medium text-2xl mb-8 tracking-tighter">Elaine's Blog</h1>
       </BlurFade>
       {posts
         .sort((a, b) => {
@@ -39,6 +39,9 @@ export default async function BlogPage() {
                 </p>
               </div>
             </Link>
+            {id < posts.length - 1 && (
+              <hr className="my-4 border-t border-gray-300" />
+            )}
           </BlurFade>
         ))}
     </section>

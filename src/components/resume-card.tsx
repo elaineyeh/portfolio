@@ -17,7 +17,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: string; // Use HTML string
 }
 export const ResumeCard = ({
   logoUrl,
@@ -99,9 +99,8 @@ export const ResumeCard = ({
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="mt-2 text-xs sm:text-sm"
-            >
-              {description}
-            </motion.div>
+              dangerouslySetInnerHTML={{ __html: description }} // Render HTML
+            />
           )}
         </div>
       </Card>
