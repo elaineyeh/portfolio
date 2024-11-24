@@ -10,7 +10,7 @@
     "lint": "next lint",
     "predeploy": "pnpm build",
     "export": "next export",
-    "deploy": "gh-pages -d out"
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
