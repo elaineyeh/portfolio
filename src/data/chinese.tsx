@@ -11,7 +11,7 @@ export const DATA = {
     "擁有超過 2 年的後端開發經驗，專注於後端 API、聊天機器人及雲端服務領域，並持續學習以獲取更多實戰經驗",
   summary:
     "我熱愛學習與嘗試新事物，擅長在過程中取得成就感並樂於分享。具備高度抗壓性，善於溝通協調，並勇於跳脫舒適圈解決問題。",
-  avatarUrl: "resume/me.JPG",
+  avatarUrl: "resume/me.jpg",
   skills: [
     [
       "Python",
@@ -313,7 +313,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/resume/project/finance_track.png",
+      image: "resume/project/finance_track.png",
       video:
         "",
     },
@@ -341,7 +341,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/resume/project/shorturl.png",
+      image: "resume/project/shorturl.png",
       video: "",
     },
     {
@@ -368,7 +368,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/resume/project/book-store.png",
+      image: "resume/project/book-store.png",
       video: "",
     },
     {
@@ -397,7 +397,7 @@ export const DATA = {
           icon: <Icons.film className="size-3" />,
         },
       ],
-      image: "/resume/project/ub.png",
+      image: "resume/project/ub.png",
       video: "",
     },
   ],

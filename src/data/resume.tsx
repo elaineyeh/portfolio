@@ -11,7 +11,7 @@ export const DATA = {
     "Over 2 years of backend development experience, specializing in backend APIs, Chatbots, and cloud services.",
   summary:
     "I am passionate about learning and exploring new things, enjoying the sense of achievement throughout the process, and eager to share knowledge. I thrive under pressure, excel in communication and collaboration, and am not afraid to step out of my comfort zone to solve challenges.",
-  avatarUrl: "resume/me.JPG",
+  avatarUrl: "resume/me.jpg",
   skills: [
     [
       "Python",
@@ -222,7 +222,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/resume/project/finance_track.png",
+      image: "resume/project/finance_track.png",
       video:
         "",
     },
@@ -250,7 +250,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/resume/project/shorturl.png",
+      image: "resume/project/shorturl.png",
       video: "",
     },
     {
@@ -277,7 +277,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/resume/project/book-store.png",
+      image: "resume/project/book-store.png",
       video: "",
     },
     {
@@ -306,7 +306,7 @@ export const DATA = {
           icon: <Icons.film className="size-3" />,
         },
       ],
-      image: "/resume/project/ub.png",
+      image: "resume/project/ub.png",
       video: "",
     },
   ],
