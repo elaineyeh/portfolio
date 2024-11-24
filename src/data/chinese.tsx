@@ -309,7 +309,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "http://127.0.0.1:3000/blog/finance",
+          href: "https://elaineyeh.github.io/portfolio/blog/finance",
           icon: <Icons.globe className="size-3" />,
         },
       ],
