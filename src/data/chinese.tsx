@@ -62,7 +62,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/%E6%98%B1%E5%BD%A4-%E8%91%89-66335933a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         icon: Icons.linkedin,
         navbar: true,
       },

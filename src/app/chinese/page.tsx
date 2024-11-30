@@ -241,7 +241,7 @@ export default function Page() {
                   href={DATA.contact.social.LinkedIn.url}
                   className="text-blue-500 hover:underline"
                 >
-                  Twitter 
+                  LinkedIn
                 </Link>
                 上私訊我，我會在方便時回覆。但請注意，我不會回應任何推銷訊息。
               </p>

@@ -2,11 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export', // 啟用靜態導出
-  basePath: '/portfolio', // 子路徑
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '', // 子路徑
   images: {
     unoptimized: true, // 為了靜態輸出
   },
-  assetPrefix: '/portfolio/', // 靜態資源前綴
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '', // 靜態資源前綴
 };
 
 export default nextConfig;
