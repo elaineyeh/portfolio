@@ -8,9 +8,9 @@ export const DATA = {
   location: "Taipei, Taiwan",
   locationLink: "https://www.google.com/maps/place/taipei",
   description:
-    "擁有超過 2 年的後端開發經驗，專注於後端 API、聊天機器人及雲端服務領域，並持續學習以獲取更多實戰經驗",
+    "3 年以上後端開發經驗，包含後端 API、Chatbot 與雲端服務相關經驗，以有更多實戰經驗為目標持續學習。",
   summary:
-    "我熱愛學習與嘗試新事物，擅長在過程中取得成就感並樂於分享。具備高度抗壓性，善於溝通協調，並勇於跳脫舒適圈解決問題。",
+    "熱愛學習與嘗試新事物，享受過程中所帶來的成就感，並樂於分享。具備高度抗壓性，勇於跳脫舒適圈嘗試新事物，善於溝通與協調解決問題。",
   avatarUrl: "resume/me.jpg",
   skills: [
     [
@@ -21,15 +21,9 @@ export const DATA = {
       "Markdown"
     ],
     [
-      "Django"
-    ],
-    [
-      "Automated Testing",
-      "Gunicorn",
-      "Nginx",
-      "CircleCI",
-      "Swagger",
-      "Websocket"
+      "Django",
+      "Django REST Framework",
+      "django-tenants"
     ],
     [
       "PostgreSQL",
@@ -40,10 +34,20 @@ export const DATA = {
       "Docker",
       "Dockerfile",
       "Docker Compose",
+      "Gunicorn",
+      "Nginx",
+    ],
+    [
       "AWS",
       "Linux",
       "Git",
+      "CircleCI",
       "Jira"
+    ],
+    [
+      "Automated Testing",
+      "Websocket",
+      "Swagger"
     ],
   ],
   navbar: [
@@ -59,6 +63,12 @@ export const DATA = {
         url: "https://github.com/elaineyeh",
         icon: Icons.github,
         navbar: true,
+      },
+      GitLab: {
+        name: "GitLub",
+        url: "https://gitlab.com/elaineyeh",
+        icon: Icons.gitlab,
+        navbar: false,
       },
       LinkedIn: {
         name: "LinkedIn",
@@ -105,24 +115,26 @@ export const DATA = {
       end: "Present",
       description:`
       <ul style="list-style-type: disc; margin-left: 20px;">
-        <li>Backend
-          <ul style="list-style-type: disc; margin-left: 20px;">
-            <li>SAAS Cloud
-              <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>基於 Django-Tenant 架構執行撰寫 114 個整合測試</li>
-                <li>開發 11 個後端 API</li>
-                <li>封存部分資料表，減輕資料庫負載並優化搜尋時間</li>
-                <li>開發多項客製化 Django command，進行資料驗證及文件生成，減少人工操作</li>
+        <li style="margin-bottom: 10px;"><strong>Backend</strong>
+          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+            <li style="margin-bottom: 8px;">SaaS 多租戶平台開發
+              <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+                <li style="margin-bottom: 6px;">設計並實作可擴展的 Django 多租戶 SaaS 架構，接收來 APP 的電池診斷紀錄，模組化系統設計支援客製功能並降低租戶間重複碼</li>
+                <li style="margin-bottom: 6px;">開發 API 包含帳號管理、一次性密碼（OTP）認證及資料存取隔離等核心功能</li>
+                <li style="margin-bottom: 6px;">基於 Django-Tenant 架構執行撰寫超過 150 個整合測試</li>
+                <li style="margin-bottom: 6px;">規劃並實作資料封存機制，定期封存舊資料，減輕資料庫負載並提升查詢效能</li>
+                <li style="margin-bottom: 6px;">開發客製化 Django command 工具，進行資料驗證及文件生成，降低人工操作錯誤率</li>
               </ul>
             </li>
-            <li>維運 5 項既有產品（Node.js）</li>
-            <li>開發 GitLab 專案成員清單驗證程式，定時檢測是否需調整專案成員</li>
-            <li>設計、開發並維護公司 SLA 系統，檢測內外部系統的 SLA 達成率，並提供 API 查看結果</li>
+            <li style="margin-bottom: 8px;">維護五個客戶專屬的 Node.js 專案，用於接收來自行動應用程式的電池診斷資料，並進行錯誤修復與功能更新。</li>
+            <li style="margin-bottom: 8px;">開發 GitLab 專案成員自動驗證工具，定時檢測異常帳號，確保專案權限安全</li>
+            <li style="margin-bottom: 8px;">設計、開發並維護內部 SLA 系統，檢測系統的 SLA 達成率，並提供 API 查看結果</li>
           </ul>
         </li>
-        <li>DevOps
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>規劃並執行 JMeter 壓力測試，調整 AWS 規格以提升性能</li>
+        <li style="margin-bottom: 10px;"><strong>DevOps</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">執行 JMeter 壓力測試，優化 AWS 架構與資源配置</li>
+              <li style="margin-bottom: 8px;">架設 SaaS Tenant 環境，整合 CloudFront、Route 53、Load Balancer、SNS、SES</li>
             </ul>
           </li>
       </ul>
@@ -139,26 +151,25 @@ export const DATA = {
       end: "July 2024",
       description:`
         <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>Backend
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>與團隊密切合作，討論需求並進行 API 規劃，同時權衡需求與工程難題</li>
-              <li>獨立開發一套完整的物流整合系統
-                <ul style="list-style-type: disc; margin-left: 20px;">
-                  <li>使用 Django REST Framework 整合多家物流 API，以提供下游產品所需 API</li>
-                  <li>使用 Django Template 搭配 CoreUI 模板開發 Dashboard</li>
-                  <li>實作兩階段驗證功能，應用在忘記密碼和電子郵件更新場景</li>
-                  <li>使用 Django-q 排程抓取物流之最新物流資料，更新並通知下游產品</li>
-                  <li>使用 Async Task 優化 API 回應時間，有效縮短使用者等待時間</li>
-                  <li>整合並實現多家物流帳務功能，以協助業務部門進行對帳和請款，大幅減少人工作業量</li>
+          <li style="margin-bottom: 10px;"><strong>Backend</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">與團隊密切合作，將需求轉換為可擴展的 API 設計與決策</li>
+              <li style="margin-bottom: 8px;">獨立開發物流整合平台
+                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+                  <li style="margin-bottom: 6px;">統整多家物流業者的配送生命週期，提供下游服務一致的 Django REST API</li>
+                  <li style="margin-bottom: 6px;">使用 Django Template 搭配 CoreUI 建立內部管理介面</li>
+                  <li style="margin-bottom: 6px;">實作密碼重設與信箱更新流程的二次驗證機制</li>
+                  <li style="margin-bottom: 6px;">使用 Django-q 實作排程任務，自動同步物流狀態，並即時通知下游系統，有效降低漏單與延遲風險</li>
+                  <li style="margin-bottom: 6px;">使用 Async Task 優化 API 回應時間，有效縮短使用者等待時間</li>
+                  <li style="margin-bottom: 6px;">整合並實現多家物流帳務功能，以協助業務部門進行對帳和請款，大幅減少人工作業量</li>
+                  <li style="margin-bottom: 6px;">撰寫詳細 API 文件與範例，加速其他系統整合效率</li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li>DevOps
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>為自己開發的 API 撰寫文件，製作 HTTP request 範例，說明流程，加速下游產品串接</li>
-              <li>撰寫 Dockerfile 並透過 AWS copilot 進行設置與整合至雲端</li>
-              <li>維護 AWS 服務：RDS, ECS, ECR, CodePipeline, Route53, ACM 等</li>
+          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">使用 Docker 與 AWS Copilot 部署服務，管理 RDS、ECS、ECR、CodePipeline、Route 53、ACM</li>
             </ul>
           </li>
         </ul>
@@ -175,24 +186,24 @@ export const DATA = {
       end: "March 2023",
       description: `
         <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>Backend
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>根據需求與團隊進行討論與協作，開發超過 50 支 API 供 Web 和 Mobile 使用，並將其文件化</li>
-              <li>規劃、重構與開發四項專案，包括功能開發、第三方服務串接以及提升程式可維護性和可閱讀性</li>
-              <li>開發多個 API 的各式功能，除了 CRUD 外的特殊經驗包括:
-                <ul style="list-style-type: disc; margin-left: 20px;">
-                  <li>使用 Regular Expression 將中文斷詞與詞性進行後處理</li>
-                  <li>使用 Requests 爬蟲將華語詞表進行數據統計</li>
+          <li style="margin-bottom: 10px;"><strong>Backend</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">根據需求與團隊進行討論與協作，開發超過 50 支 API 供 Web 和 Mobile 使用，並將其文件化</li>
+              <li style="margin-bottom: 8px;">規劃、重構與開發四項專案，包括功能開發、第三方服務串接以及提升程式可維護性和可閱讀性</li>
+              <li style="margin-bottom: 8px;">除 CRUD 外，亦開發多項 API 功能，包括：
+                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+                  <li style="margin-bottom: 6px;">使用 Regular Expression 將中文斷詞與詞性進行後處理</li>
+                  <li style="margin-bottom: 6px;">使用 Requests 爬蟲將華語詞表進行數據統計</li>
                 </ul>
               </li>
-              <li>日常系統維運公司 12 項 Django 框架專案、2 個 Chrome extension，處理 Bug 回報、新增與優化系統功能，修復系統中的程式與資料錯誤等</li>
+              <li style="margin-bottom: 8px;">開發與維護 12 個語言學習平台（基於 Django）及 2 個內部使用的 Chrome 擴充工具，持續推出新功能，並解決使用者回報問題與資料異常</li>
+              <li style="margin-bottom: 8px;">為自己開發的 API 撰寫文件，製作 HTTP request 範例，說明流程，加速前端開發</li>
             </ul>
           </li>
-          <li>DevOps
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>使用 CircleCI 建立 CI/CD 流程，改善 3 項舊有產品 CI/CD 架構</li>
-              <li>為自己開發的 API 撰寫文件，製作 HTTP request 範例，說明流程，加速前端開發</li>
-              <li>維護 AWS 服務：EC2, S3, Elastic Beanstalk, RDS, SNS, SES 等</li>
+          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">使用 CircleCI 建立 CI/CD 流程，改善 3 項舊有產品 CI/CD 架構</li>
+              <li style="margin-bottom: 8px;">維護 AWS EC2、S3、Elastic Beanstalk、RDS、SNS、SES 等服務</li>
             </ul>
           </li>
         </ul>
@@ -208,16 +219,11 @@ export const DATA = {
       start: "February 2022",
       end: "July 2022",
       description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>基礎架構維運管理服務</li>
-          <li>軟硬體管理服務
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>客戶技術支援 - 用戶端電腦、伺服器、網路設備</li>
-              <li>管理 Microsoft O365、AD、File Server、無線網路等日常維運事項</li>
-            </ul>
-          </li>
-          <li>有效地與客戶溝通，準確理解與定位客戶問題</li>
-          <li>擔任實習生小組長</li>
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+          <li style="margin-bottom: 10px;">為企業客戶提供 IT 支援與系統維護，處理硬體、作業系統、軟體問題</li>
+          <li style="margin-bottom: 10px;">管理 O365、AD、檔案伺服器與企業級無線網路</li>
+          <li style="margin-bottom: 10px;">有效地與客戶溝通，準確理解與定位客戶問題</li>
+          <li style="margin-bottom: 10px;">擔任實習生小組長，協助實習生團隊協作與管理</li>
         </ul>
       `,
     },
@@ -232,18 +238,18 @@ export const DATA = {
       end: "June 2021",
       description:`
         <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>使用 CircleCI 建立 CI/CD 流程，改善舊有產品 CI/CD 架構</li>
-          <li>撰寫 Dockerfile 將服務容器化，方便產品部署</li>
-          <li>獨立開發 IRS (Interactive Response System) 即時通訊系統
-            <ul style="list-style-type: disc; margin-left: 20px;">
-              <li>使用 Django REST Framework 與前端完成 22 項功能</li>
-              <li>使用 Django Channels 實作 WebSocket 即時通訊系統</li>
-              <li>使用 pytest 完成 98 個整合測試</li>
+          <li style="margin-bottom: 10px;"><strong>Backend</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">使用 Django REST Framework 與 Channels 開發即時互動教學 IRS 系統，完成 22 項功能與 98 筆測試</li>
+              <li style="margin-bottom: 8px;">撰寫 E2E API 自動測試腳本，維護四項專案</li>
             </ul>
           </li>
-          <li>開發公司 E2E API 自動化測試，用 Git 與他人協作</li>
-          <li>維護公司 4 項專案</li>
-          <li>測試、調整流程並帶領新進測試人員進行產品之手動測試</li>
+          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
+              <li style="margin-bottom: 8px;">使用 Docker 與 CircleCI 建立服務容器與自動化部署流程</li>
+            </ul>
+          </li>
+          <li style="margin-bottom: 10px;">測試、調整流程並帶領新進測試人員進行產品之手動測試</li>
         </ul>
       `,
     },
@@ -260,11 +266,21 @@ export const DATA = {
       end: "",
       description: `
         <ul style="list-style-type: disc; margin-left: 20px;">
-          <li>臺灣客語語料庫系統後端開發及日常維運</li>
-          <li>Chitchat 系統後端開發</li>
-          <li>將既有產品移至 EC2 上</li>
+          <li style="margin-bottom: 10px;">臺灣客語語料庫系統後端開發及日常維運
+            <ul style="list-style-type: disc; margin-left: 20px;">
+              <li style="margin-bottom: 8px;">與團隊協作，實作多項 Web API 並維護詳細文件</li>
+              <li style="margin-bottom: 8px;">串接 Google reCAPTCHA v3 提升驗證安全性</li>
+            </ul>
+          </li>
+          <li style="margin-bottom: 10px;">英文口說學習系統後端開發</li>
+          <li style="margin-bottom: 10px;">計程車派車系統後端開發與維運：整合上游訂單來源，派發給合作車行或自有司機
+            <ul style="list-style-type: disc; margin-left: 20px;">
+              <li style="margin-bottom: 8px;">與團隊協作，實作多項 Web API 並維護詳細文件</li>
+              <li style="margin-bottom: 8px;">客製 Django Admin 支援批次更新訂單、指派司機、上下游訂單匯入匯出</li>
+            </ul>
+          </li>
+          <li style="margin-bottom: 10px;">將既有產品移至 EC2 上</li>
         </ul>
-
       `,
     }
   ],
@@ -299,11 +315,15 @@ export const DATA = {
       technologies: [
         "Django",
         "Django-q",
+        "Docker Compose",
         "PostgreSQL",
+        "HTML",
+        "CSS",
         "JavaScript",
         "Gunicorn",
         "Nginx",
         "AWS EC2",
+        "AWS Route53",
         "LineBot",
       ],
       links: [
@@ -323,14 +343,18 @@ export const DATA = {
       dates: "Mar 2024 - Apr 2024",
       active: true,
       description:
-        "開發了一個個人短網址服務作為 Side Project，具備建立、查詢和跳轉短網址的功能。使用 Django Template 和 Bootstrap 打造了簡潔直觀的前端介面。",
+        "開發了個人短網址服務作為 Side Project，具備建立、查詢和跳轉短網址的功能。使用 Django Template 和 Bootstrap 打造了簡潔直觀的前端介面。",
       technologies: [
         "Django",
         "Docker Compose",
         "PostgreSQL",
         "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript",
         "Nginx",
         "AWS EC2",
+        "AWS ECR",
         "AWS ECS",
         "AWS CodePipeline",
       ],
@@ -356,6 +380,9 @@ export const DATA = {
         "Docker Compose",
         "PostgreSQL",
         "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript",
         "Gunicorn",
         "Nginx",
         "CircleCI",
