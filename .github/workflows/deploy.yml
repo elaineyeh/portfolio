@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 當 push 到 main 分支時觸發
+
+permissions:
+  contents: write  # 需要寫入 gh-pages 分支的權限
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 環境
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # 下載代碼
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # 使用 Node.js 18
+
+      - name: Install pnpm
+        run: npm install -g pnpm  # 安裝 pnpm
+
+      - name: Install dependencies
+        run: pnpm install  # 安裝專案依賴
+
+      - name: Clean up old build files
+        run: rm -rf .next out  # 清除舊的建置檔案
+
+      - name: Build the static site
+        run: pnpm run build  # 執行 build 指令，生成靜態頁面
+
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll  # 防止 Jekyll 被啟用（這是 GitHub Pages 的默認行為）
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的自動授權 token
+          publish_dir: ./out  # 要發佈的資料夾
+          enable_jekyll: false  # 禁用 Jekyll（因為你的網站是靜態的）
