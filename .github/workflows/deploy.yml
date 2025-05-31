@@ -36,6 +36,9 @@ jobs:
       - name: Add .nojekyll file
         run: touch out/.nojekyll  # 防止 Jekyll 被啟用（這是 GitHub Pages 的默認行為）
 
+      - name: Add CNAME file
+        run: echo 'www.elainehub.com' > out/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
