@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "3 年以上後端開發經驗，包含後端 API、Chatbot 與雲端服務相關經驗，以有更多實戰經驗為目標持續學習。",
   summary:
-    "熱愛學習與嘗試新事物，享受過程中所帶來的成就感，並樂於分享。具備高度抗壓性，勇於跳脫舒適圈嘗試新事物，善於溝通與協調解決問題。",
+    "具備 Python、Django 後端系統開發經驗，專注於 SaaS 平台、RESTful API 及多租戶系統相關功能開發。熟悉既有系統下的需求分析、功能設計與獨立開發，具備 Django 自動化測試、Node.js 產品整合及 AWS 雲端環境部署維護經驗。此外，亦運用 AI 輔助前端程式碼修改與功能開發，具備跨技術領域的系統整合與維護能力。",
   avatarUrl: "resume/me.jpg",
   skills: [
     [
@@ -113,31 +113,65 @@ export const DATA = {
       logoUrl: "resume/work/dhc.png",
       start: "August 2024",
       end: "Present",
-      description:`
-      <ul style="list-style-type: disc; margin-left: 20px;">
-        <li style="margin-bottom: 10px;"><strong>Backend</strong>
-          <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-            <li style="margin-bottom: 8px;">SaaS 多租戶平台開發
-              <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-                <li style="margin-bottom: 6px;">設計並實作可擴展的 Django 多租戶 SaaS 架構，接收來 APP 的電池診斷紀錄，模組化系統設計支援客製功能並降低租戶間重複碼</li>
-                <li style="margin-bottom: 6px;">開發 API 包含帳號管理、一次性密碼（OTP）認證及資料存取隔離等核心功能</li>
-                <li style="margin-bottom: 6px;">基於 Django-Tenant 架構執行撰寫超過 150 個整合測試</li>
-                <li style="margin-bottom: 6px;">規劃並實作資料封存機制，定期封存舊資料，減輕資料庫負載並提升查詢效能</li>
-                <li style="margin-bottom: 6px;">開發客製化 Django command 工具，進行資料驗證及文件生成，降低人工操作錯誤率</li>
-              </ul>
-            </li>
-            <li style="margin-bottom: 8px;">維護五個客戶專屬的 Node.js 專案，用於接收來自行動應用程式的電池診斷資料，並進行錯誤修復與功能更新。</li>
-            <li style="margin-bottom: 8px;">開發 GitLab 專案成員自動驗證工具，定時檢測異常帳號，確保專案權限安全</li>
-            <li style="margin-bottom: 8px;">設計、開發並維護內部 SLA 系統，檢測系統的 SLA 達成率，並提供 API 查看結果</li>
-          </ul>
-        </li>
-        <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">執行 JMeter 壓力測試，優化 AWS 架構與資源配置</li>
-              <li style="margin-bottom: 8px;">架設 SaaS Tenant 環境，整合 CloudFront、Route 53、Load Balancer、SNS、SES</li>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 12px;">
+            <strong>後端開發與系統整合</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                在既有 Django SaaS 多租戶架構下，獨立負責功能需求分析、技術設計與開發實作，透過模組化設計支援客戶客製化需求，並降低租戶間的重複程式碼。
+              </li>
+              <li style="margin-bottom: 8px;">
+                開發帳號管理、一次性密碼（OTP）認證及權限控管等核心 API，處理 App 傳入的電池診斷資料及相關業務流程。
+              </li>
+              <li style="margin-bottom: 8px;">
+                開發及維護超過 150 項 Django 後端自動化測試，以單元測試為主，驗證系統功能及多租戶相關邏輯。
+              </li>
+              <li style="margin-bottom: 8px;">
+                規劃並實作資料封存機制，將符合條件的歷史資料由主要資料表移轉至封存資料表，降低主要資料表負載並改善查詢效能。
+              </li>
+              <li style="margin-bottom: 8px;">
+                開發資料統計功能，彙整系統資料並提供統計圖表，支援使用者檢視相關資訊。
+              </li>
+              <li style="margin-bottom: 8px;">
+                在新舊系統轉換期間，實作 Proxy Forward 資料轉送機制，銜接既有系統與新系統的資料傳遞流程。
+              </li>
+              <li style="margin-bottom: 8px;">
+                整合及維護五個客戶專屬的 Node.js 專案，負責 App 電池診斷資料接收流程的錯誤修復與功能更新。
+              </li>
+              <li style="margin-bottom: 8px;">
+                設計、開發及維護內部 SLA 監控系統，計算系統 SLA 達成率並提供 API 查詢監控結果。
+              </li>
+              <li style="margin-bottom: 8px;">
+                運用 AI 輔助進行 Vue.js 前端功能修改與開發，並將修改內容整合至既有系統。
+              </li>
             </ul>
           </li>
-      </ul>
+
+          <li style="margin-bottom: 12px;">
+            <strong>雲端部署與維運（DevOps）</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                建置及維護 AWS SaaS Tenant 執行環境，整合 CloudFront、Route 53、Load Balancer、SNS 及 SES 等服務。
+              </li>
+              <li style="margin-bottom: 8px;">
+                使用 JMeter 執行系統壓力測試，依測試結果調整 AWS 架構及資源配置。
+              </li>
+              <li style="margin-bottom: 8px;">
+                負責 AWS Elastic Beanstalk、Lambda、OpenSearch 及 ElastiCache 等服務的版本升級與維護。
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 8px;">
+            <strong>資訊安全與內部管理</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                參與 ISO 27001 資訊安全相關作業，追蹤最新資安漏洞資訊並回報團隊討論，協助盤點及登記特權帳號。
+              </li>
+            </ul>
+          </li>
+        </ul>
       `,
     },
     {
@@ -149,27 +183,41 @@ export const DATA = {
       logoUrl: "resume/work/sysfeather.png",
       start: "April 2023",
       end: "July 2024",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">與團隊密切合作，將需求轉換為可擴展的 API 設計與決策</li>
-              <li style="margin-bottom: 8px;">獨立開發物流整合平台
-                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-                  <li style="margin-bottom: 6px;">統整多家物流業者的配送生命週期，提供下游服務一致的 Django REST API</li>
-                  <li style="margin-bottom: 6px;">使用 Django Template 搭配 CoreUI 建立內部管理介面</li>
-                  <li style="margin-bottom: 6px;">實作密碼重設與信箱更新流程的二次驗證機制</li>
-                  <li style="margin-bottom: 6px;">使用 Django-q 實作排程任務，自動同步物流狀態，並即時通知下游系統，有效降低漏單與延遲風險</li>
-                  <li style="margin-bottom: 6px;">使用 Async Task 優化 API 回應時間，有效縮短使用者等待時間</li>
-                  <li style="margin-bottom: 6px;">整合並實現多家物流帳務功能，以協助業務部門進行對帳和請款，大幅減少人工作業量</li>
-                  <li style="margin-bottom: 6px;">撰寫詳細 API 文件與範例，加速其他系統整合效率</li>
-                </ul>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 12px;">
+            <strong>物流整合平台開發</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                獨立開發 Django 物流整合平台，整合多家物流業者的配送生命週期，統一對外提供 Django REST API，簡化下游系統的物流服務串接。
+              </li>
+              <li style="margin-bottom: 8px;">
+                整合多家物流業者的帳務資料與請款功能，支援業務部門進行對帳及請款作業，減少人工資料整理工作。
+              </li>
+              <li style="margin-bottom: 8px;">
+                導入 Django async/await 非同步處理，將適合非同步執行的作業移出同步處理流程，改善 API 回應時間。
+              </li>
+              <li style="margin-bottom: 8px;">
+                使用 django-q 建立背景排程任務，自動同步物流配送狀態並通知下游系統，降低下游系統狀態更新延遲。
+              </li>
+              <li style="margin-bottom: 8px;">
+                實作密碼重設及電子郵件更新流程的二次驗證機制，強化帳號操作安全性。
+              </li>
+              <li style="margin-bottom: 8px;">
+                使用 Django Template 與 CoreUI 建置內部管理介面。
+              </li>
+              <li style="margin-bottom: 8px;">
+                撰寫 API 技術文件及 HTTP Request 範例，說明 API 使用方式與串接流程，協助前端及其他系統進行整合。
               </li>
             </ul>
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">使用 Docker 與 AWS Copilot 部署服務，管理 RDS、ECS、ECR、CodePipeline、Route 53、ACM</li>
+
+          <li style="margin-bottom: 8px;">
+            <strong>雲端部署與維運（DevOps）</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                使用 Docker 與 AWS Copilot 建置及部署應用服務，管理 AWS RDS、ECS、ECR、CodePipeline、Route 53 及 ACM 等雲端資源。
+              </li>
             </ul>
           </li>
         </ul>
@@ -185,26 +233,24 @@ export const DATA = {
       start: "August 2022",
       end: "March 2023",
       description: `
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">根據需求與團隊進行討論與協作，開發超過 50 支 API 供 Web 和 Mobile 使用，並將其文件化</li>
-              <li style="margin-bottom: 8px;">規劃、重構與開發四項專案，包括功能開發、第三方服務串接以及提升程式可維護性和可閱讀性</li>
-              <li style="margin-bottom: 8px;">除 CRUD 外，亦開發多項 API 功能，包括：
-                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-                  <li style="margin-bottom: 6px;">使用 Regular Expression 將中文斷詞與詞性進行後處理</li>
-                  <li style="margin-bottom: 6px;">使用 Requests 爬蟲將華語詞表進行數據統計</li>
-                </ul>
-              </li>
-              <li style="margin-bottom: 8px;">開發與維護 12 個語言學習平台（基於 Django）及 2 個內部使用的 Chrome 擴充工具，持續推出新功能，並解決使用者回報問題與資料異常</li>
-              <li style="margin-bottom: 8px;">為自己開發的 API 撰寫文件，製作 HTTP request 範例，說明流程，加速前端開發</li>
-            </ul>
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;">
+            與團隊討論及分析系統需求，開發並維護超過 50 支 RESTful API，提供 Web 與 Mobile 應用程式使用，並撰寫 API 文件及串接範例。
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">使用 CircleCI 建立 CI/CD 流程，改善 3 項舊有產品 CI/CD 架構</li>
-              <li style="margin-bottom: 8px;">維護 AWS EC2、S3、Elastic Beanstalk、RDS、SNS、SES 等服務</li>
-            </ul>
+          <li style="margin-bottom: 8px;">
+            參與四項專案的規劃、程式重構及功能開發，涵蓋既有功能調整、第三方服務整合，以及程式碼可維護性與可讀性的改善。
+          </li>
+          <li style="margin-bottom: 8px;">
+            開發中文語言處理功能，使用 Regular Expression 後處理中文斷詞及詞性標記，並透過 Python Requests 擷取華語詞表資料進行統計分析。
+          </li>
+          <li style="margin-bottom: 8px;">
+            維護 12 個基於 Django 的語言學習平台及 2 個內部使用的 Chrome 擴充工具，持續開發新功能、修復使用者回報問題及處理資料異常。
+          </li>
+          <li style="margin-bottom: 8px;">
+            使用 CircleCI 建立 CI/CD 流程，並改善三項既有產品的自動化建置與部署流程。
+          </li>
+          <li style="margin-bottom: 8px;">
+            維護 AWS EC2、S3、Elastic Beanstalk、RDS、SNS 及 SES 等雲端服務，支援既有產品運作與部署需求。
           </li>
         </ul>
       `,
@@ -218,17 +264,22 @@ export const DATA = {
       logoUrl: "resume/work/freedom.png",
       start: "February 2022",
       end: "July 2022",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-          <li style="margin-bottom: 10px;">為企業客戶提供 IT 支援與系統維護，處理硬體、作業系統、軟體問題</li>
-          <li style="margin-bottom: 10px;">管理 O365、AD、檔案伺服器與企業級無線網路</li>
-          <li style="margin-bottom: 10px;">有效地與客戶溝通，準確理解與定位客戶問題</li>
-          <li style="margin-bottom: 10px;">擔任實習生小組長，協助實習生團隊協作與管理</li>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;">
+            為企業客戶提供 IT 技術支援與系統維護，處理硬體、作業系統及軟體問題，並與客戶溝通釐清問題情境及進行故障排除。
+          </li>
+          <li style="margin-bottom: 8px;">
+            協助管理 Microsoft 365（O365）、Active Directory（AD）、檔案伺服器及企業級無線網路。
+          </li>
+          <li style="margin-bottom: 8px;">
+            擔任實習生小組長，協助團隊工作分配、溝通協調及日常管理。
+          </li>
         </ul>
       `,
     },
     {
-      company: "Ponddy Education Taiwan Ltd.",
+      company: "龎帝數位資訊有限公司",
       href: "#",
       badges: [],
       location: "Taipei, Taiwan",
@@ -236,20 +287,20 @@ export const DATA = {
       logoUrl: "resume/work/ponddy.png",
       start: "June 2020",
       end: "June 2021",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">使用 Django REST Framework 與 Channels 開發即時互動教學 IRS 系統，完成 22 項功能與 98 筆測試</li>
-              <li style="margin-bottom: 8px;">撰寫 E2E API 自動測試腳本，維護四項專案</li>
-            </ul>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;">
+            使用 Django REST Framework 與 Django Channels 開發即時互動教學 IRS 系統，完成 22 項功能開發及 98 筆測試。
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">使用 Docker 與 CircleCI 建立服務容器與自動化部署流程</li>
-            </ul>
+          <li style="margin-bottom: 8px;">
+            撰寫 API End-to-End（E2E）自動化測試腳本，並協助維護四項專案的 API 測試。
           </li>
-          <li style="margin-bottom: 10px;">測試、調整流程並帶領新進測試人員進行產品之手動測試</li>
+          <li style="margin-bottom: 8px;">
+            使用 Docker 容器化服務，並搭配 CircleCI 建立自動化建置與部署流程。
+          </li>
+          <li style="margin-bottom: 8px;">
+            執行產品手動測試、驗證功能流程，並協助帶領新進測試人員進行產品測試。
+          </li>
         </ul>
       `,
     },
@@ -262,20 +313,19 @@ export const DATA = {
       location: "Taipei, Taiwan",
       title: "後端工程師",
       logoUrl: "resume/work/xkernel.png",
-      start: "",
-      end: "",
+      start: "March 2023",
+      end: "April 2025",
       description: `
         <ul style="list-style-type: disc; margin-left: 20px;">
           <li style="margin-bottom: 10px;">臺灣客語語料庫系統後端開發及日常維運
             <ul style="list-style-type: disc; margin-left: 20px;">
-              <li style="margin-bottom: 8px;">與團隊協作，實作多項 Web API 並維護詳細文件</li>
+              <li style="margin-bottom: 8px;">與團隊協作，實作多項 REST API 並維護詳細文件</li>
               <li style="margin-bottom: 8px;">串接 Google reCAPTCHA v3 提升驗證安全性</li>
             </ul>
           </li>
-          <li style="margin-bottom: 10px;">英文口說學習系統後端開發</li>
           <li style="margin-bottom: 10px;">計程車派車系統後端開發與維運：整合上游訂單來源，派發給合作車行或自有司機
             <ul style="list-style-type: disc; margin-left: 20px;">
-              <li style="margin-bottom: 8px;">與團隊協作，實作多項 Web API 並維護詳細文件</li>
+              <li style="margin-bottom: 8px;">與團隊協作，實作多項 REST API 並維護詳細文件</li>
               <li style="margin-bottom: 8px;">客製 Django Admin 支援批次更新訂單、指派司機、上下游訂單匯入匯出</li>
             </ul>
           </li>

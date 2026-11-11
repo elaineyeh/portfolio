@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronDownIcon, ExternalLinkIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -18,6 +18,8 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string; // Use HTML string
+  expandLabel?: string;
+  collapseLabel?: string;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,25 +30,16 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  expandLabel = "Expand experience",
+  collapseLabel = "Collapse experience",
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (description) {
-      e.preventDefault();
-      setIsExpanded(!isExpanded);
-    }
-  };
+  const contentId = `experience-${title.replace(/\W+/g, "-")}-${period.replace(/\W+/g, "-")}`;
 
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
-      onClick={handleClick}
-    >
-      <Card className="flex">
+    <Card className="resume-card flex gap-4 border p-4 shadow-none">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="size-12 border bg-muted-background dark:bg-foreground">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -55,11 +48,12 @@ export const ResumeCard = ({
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
-          <CardHeader>
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                {title}
+        <div className="min-w-0 flex-grow">
+          <CardHeader className="p-0">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div className="min-w-0">
+                <h3 className="flex flex-wrap items-center gap-2 text-sm font-semibold leading-5">
+                  {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
@@ -73,37 +67,49 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
-              </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
+                </h3>
+                {subtitle && <div className="mt-1 text-xs text-muted-foreground">{subtitle}</div>}
+              </div>
+              <div className="flex shrink-0 flex-wrap items-center gap-3 text-left text-xs tabular-nums text-muted-foreground sm:justify-end sm:text-right">
+                {period && <span>{period}</span>}
+                {!description && href && href !== "#" && (
+                  <Link className="resume-link inline-flex items-center gap-1 text-xs" href={href} target="_blank" rel="noreferrer">
+                    <ExternalLinkIcon className="size-3" />
+                  </Link>
+                )}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
           {description && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{
-                opacity: isExpanded ? 1 : 0,
-
-                height: isExpanded ? "auto" : 0,
-              }}
-              transition={{
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="mt-2 text-xs sm:text-sm"
-              dangerouslySetInnerHTML={{ __html: description }} // Render HTML
-            />
+            <>
+              <div className="mt-3 flex flex-wrap items-center gap-3 print:hidden">
+                <button
+                  type="button"
+                  className="resume-link inline-flex items-center gap-1 text-xs font-medium"
+                  aria-expanded={isExpanded}
+                  aria-controls={contentId}
+                  onClick={() => setIsExpanded((expanded) => !expanded)}
+                >
+                  <ChevronDownIcon className={cn("size-4 transition-transform", isExpanded && "rotate-180")} />
+                  {isExpanded ? collapseLabel : expandLabel}
+                </button>
+                {href && href !== "#" && (
+                  <Link className="resume-link inline-flex items-center gap-1 text-xs" href={href} target="_blank" rel="noreferrer">
+                    Company site <ExternalLinkIcon className="size-3" />
+                  </Link>
+                )}
+              </div>
+              <motion.div
+                id={contentId}
+                initial={false}
+                animate={{ opacity: isExpanded ? 1 : 0, height: isExpanded ? "auto" : 0 }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                className="resume-description mt-4 overflow-hidden text-xs leading-6 sm:text-sm"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+            </>
           )}
         </div>
-      </Card>
-    </Link>
+    </Card>
   );
 };

@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Over 3 years of backend development experience, specializing in backend APIs, Chatbots, and cloud services.",
   summary:
-    "I am passionate about learning and exploring new things, enjoying the sense of achievement throughout the process, and eager to share knowledge. I thrive under pressure, excel in communication and collaboration, and am not afraid to step out of my comfort zone to solve challenges.",
+    "Experienced in Python and Django backend development, with a focus on SaaS platforms, RESTful APIs, and multi-tenant systems. Skilled in analyzing requirements, designing features, and independently developing functionality within existing systems. Experienced in Django automated testing, Node.js product integration, and AWS cloud deployment and maintenance. Also leverage AI-assisted tools for frontend code modifications and feature development, with the ability to integrate and maintain systems across different technology stacks.",
   avatarUrl: "resume/me.jpg",
   skills: [
     [
@@ -107,35 +107,69 @@ export const DATA = {
   work: [
     {
       company: "DHC Specialty Corp.",
-      href: "https://www.dhc.com.tw/m/?Lang=en",
+      href: "https://www.dhc.com.tw/m/?Lang=zh-tw",
       badges: [],
       location: "Taipei, Taiwan",
       title: "Senior Software Engineer",
       logoUrl: "resume/work/dhc.png",
       start: "August 2024",
       end: "Present",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">SaaS Multi-Tenant Platform Development
-                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-                  <li style="margin-bottom: 6px;">Architected and implemented a scalable, tenant-isolated SaaS platform in Django for receiving battery diagnostics from mobile apps. Designed the system with pluggable modules to support client-specific features and reduce code duplication across tenants.</li>
-                  <li style="margin-bottom: 6px;">Developed APIs for core functionalities including account management, OTP authentication, and data access segregation.</li>
-                  <li style="margin-bottom: 6px;">Wrote over 150 integration tests to ensure system stability under Django-Tenant architecture.</li>
-                  <li style="margin-bottom: 6px;">Implemented a data archiving mechanism for legacy records to reduce database load and improve query performance.</li>
-                  <li style="margin-bottom: 6px;">Developed custom Django management commands to validate data and generate documents automatically, reducing manual workload.</li>
-                </ul>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 12px;">
+            <strong>Backend Development & System Integration</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                Independently handle feature requirement analysis, technical design, and implementation within an existing Django-based multi-tenant SaaS architecture. Apply modular design to support client-specific customization and reduce code duplication across tenants.
               </li>
-              <li style="margin-bottom: 8px;">Maintained five client-specific Node.js products for receiving battery diagnostics from mobile apps, providing bug fixes and incremental feature updates.</li>
-              <li style="margin-bottom: 8px;">Developed a GitLab project audit tool to validate member permissions regularly.</li>
-              <li style="margin-bottom: 8px;">Built and maintained an internal SLA monitoring system and provided APIs for internal and external systems to retrieve SLA results.</li>
+              <li style="margin-bottom: 8px;">
+                Develop core APIs for account management, one-time password (OTP) authentication, and access control, handling battery diagnostic data submitted by App and related business workflows.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Develop and maintain over 150 Django backend automated tests, primarily unit tests, to validate system functionality and multi-tenant logic.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Design and implement a data archiving mechanism to migrate eligible historical records from primary tables to archive tables, reducing the workload on primary tables and improving query performance.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Develop data analytics features to aggregate system data and provide statistical charts for users to review relevant information.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Implement a Proxy Forward mechanism during the legacy-to-new system migration to facilitate data transmission between existing and new systems.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Integrate and maintain five client-specific Node.js projects, handling bug fixes and feature updates for App battery diagnostic data ingestion workflows.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Design, develop, and maintain an internal SLA monitoring system to calculate SLA compliance rates and provide APIs for querying monitoring results.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Leverage AI-assisted development tools to modify and develop Vue.js frontend features, integrating the changes into existing systems.
+              </li>
             </ul>
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Executed JMeter performance tests and optimized AWS resource configurations.</li>
-              <li style="margin-bottom: 8px;">Set up and deployed a SaaS environment with Elastic Beanstalk, CloudFront, Route 53, ALB, SNS, and SES.</li>
+
+          <li style="margin-bottom: 12px;">
+            <strong>Cloud Deployment & Operations (DevOps)</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                Build and maintain AWS infrastructure for a multi-tenant SaaS platform, integrating services such as Elastic Beanstalk, RDS, CloudFront, Route 53, SNS, and SES.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Conduct system load testing using JMeter and optimize AWS architecture and resource allocation based on test results.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Manage version upgrades and maintenance for AWS services, including Elastic Beanstalk, Lambda, OpenSearch, and ElastiCache.
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 8px;">
+            <strong>Information Security & Internal Operations</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                Participate in ISO 27001-related information security activities, monitor emerging security vulnerabilities, report findings for team discussion, and assist with privileged account inventory and registration.
+              </li>
             </ul>
           </li>
         </ul>
@@ -150,27 +184,41 @@ export const DATA = {
       logoUrl: "resume/work/sysfeather.png",
       start: "April 2023",
       end: "July 2024",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Collaborated closely with the team to translate requirements into scalable API designs and architecture decisions.</li>
-              <li style="margin-bottom: 8px;">Independently built an logistics-integration platform:
-                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-                  <li style="margin-bottom: 6px;">Mapped the life-cycles of multiple carriers and unified them with Django REST Framework APIs consumed by downstream products.</li>
-                  <li style="margin-bottom: 6px;">Delivered an internal dashboard with Django Template + CoreUI.</li>
-                  <li style="margin-bottom: 6px;">Added two-step verification for password-reset and email-update flows.</li>
-                  <li style="margin-bottom: 6px;">Employed Django-q scheduled jobs to sync carrier statuses and push instant updates, cutting lost-order / delay risk.</li>
-                  <li style="margin-bottom: 6px;">Introduced async tasks that reduced API latency and improved user experience.</li>
-                  <li style="margin-bottom: 6px;">Integrated multi-carrier billing Functions, automating reconciliation and invoicing and saving significant manual effort for the sales team.</li>
-                  <li style="margin-bottom: 6px;">Wrote comprehensive API docs and request samples to speed up third-party integration.</li>
-                </ul>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 12px;">
+            <strong>Logistics Integration Platform Development</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                Independently developed a Django-based logistics integration platform that unified the delivery lifecycles of multiple logistics providers and exposed standardized Django REST APIs, simplifying logistics service integration for downstream systems.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Integrated billing data and payment request workflows from multiple logistics providers, supporting the business team with reconciliation and payment processing while reducing manual data preparation.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Implemented asynchronous processing using Python's async/await syntax in Django, improving API response times by moving suitable operations out of synchronous request workflows.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Implemented background scheduled tasks using django-q to automatically synchronize shipment statuses and notify downstream systems, reducing status update delays.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Implemented secondary verification mechanisms for password reset and email address update workflows to enhance account security.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Built an internal administration interface using Django Templates and CoreUI.
+              </li>
+              <li style="margin-bottom: 8px;">
+                Created API documentation and HTTP request examples to explain API usage and integration workflows, facilitating integration by frontend developers and other systems.
               </li>
             </ul>
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Containerized services with Docker and deployed via AWS Copilot; managed RDS, ECS, ECR, CodePipeline, Route 53, ACM.</li>
+
+          <li style="margin-bottom: 8px;">
+            <strong>Cloud Deployment & Operations (DevOps)</strong>
+            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+              <li style="margin-bottom: 8px;">
+                Built and deployed application services using Docker and AWS Copilot, and managed cloud resources including AWS RDS, ECS, ECR, CodePipeline, Route 53, and ACM.
+              </li>
             </ul>
           </li>
         </ul>
@@ -179,52 +227,55 @@ export const DATA = {
     {
       company: "Ponddy Education Taiwan Ltd.",
       href: "#",
-      badges: ["Ceased Operations"],
+      badges: ["Out of Business"],
       location: "Taipei, Taiwan",
       title: "Software Engineer",
       logoUrl: "resume/work/ponddy.png",
       start: "August 2022",
       end: "March 2023",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Collaborated with the team to design and develop over 50 APIs for both web and mobile platforms, with complete documentation.</li>
-              <li style="margin-bottom: 8px;">Planned, refactored, and implemented features across four projects, including third-party service integration and improving code maintainability and readability.</li>
-              <li style="margin-bottom: 8px;">Developed various API features beyond CRUD, such as:
-                <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-                  <li style="margin-bottom: 6px;">Used regular expressions to post-process Chinese word segmentation and part-of-speech tagging.</li>
-                  <li style="margin-bottom: 6px;">Built web crawlers with requests to analyze Mandarin word lists and generate statistical summaries.</li>
-                </ul>
-              </li>
-              <li style="margin-bottom: 8px;">Developed and maintained 12 Django-based language learning platforms and 2 internal-use Chrome extensions, delivering new features while resolving user-reported issues and fixing data inconsistencies.</li>
-              <li style="margin-bottom: 8px;">Wrote API documentation and sample HTTP requests for the frontend team, streamlining development and integration.</li>
-            </ul>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;">
+            Collaborated with the team to analyze system requirements and developed and maintained over 50 RESTful APIs for web and App, including API documentation and integration examples.
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Established CI/CD pipelines using CircleCI and revamped legacy pipelines for three older products.</li>
-              <li style="margin-bottom: 8px;">Maintained AWS services including EC2, S3, Elastic Beanstalk, RDS, SNS, and SES.</li>
-            </ul>
+          <li style="margin-bottom: 8px;">
+            Participated in the planning, refactoring, and feature development of four projects, covering existing feature enhancements, third-party service integrations, and improvements to code maintainability and readability.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Developed Chinese language processing features using regular expressions to post-process Chinese word segmentation results and part-of-speech tags, and used Python Requests to retrieve Chinese vocabulary data for statistical analysis.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Maintained 12 Django-based language learning platforms and two internal Chrome extensions, developing new features, resolving user-reported issues, and handling data inconsistencies.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Established CI/CD pipelines using CircleCI and improved automated build and deployment workflows for three existing products.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Maintained AWS services including EC2, S3, Elastic Beanstalk, RDS, SNS, and SES to support existing product operations and deployment requirements.
           </li>
         </ul>
       `,
     },
     {
       company: "Freedom Systems Inc.",
-      href: "https://www.freedom.net.tw/en/",
+      href: "https://www.freedom.net.tw/",
       badges: [],
       location: "Taipei, Taiwan",
-      title: "Trainee Engineer",
+      title: "Engineering Intern",
       logoUrl: "resume/work/freedom.png",
       start: "February 2022",
       end: "July 2022",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-          <li style="margin-bottom: 10px;">Provided IT support and system maintenance for client environments, including hardware, OS, and software troubleshooting.</li>
-          <li style="margin-bottom: 10px;">Managed O365, Active Directory, file servers, and enterprise-level wireless networks.</li>
-          <li style="margin-bottom: 10px;">Communicated directly with clients to understand and resolve technical issues.</li>
-          <li style="margin-bottom: 10px;">Led intern team in coordination tasks.</li>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;">
+            Provided IT support and system maintenance for enterprise clients, troubleshooting hardware, operating system, and software issues, and communicating with clients to identify problems and perform initial diagnostics.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Assisted in managing Microsoft 365 (O365), Active Directory (AD), file servers, and enterprise wireless networks.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Served as an intern team leader, assisting with task allocation, team coordination, and daily operations.
+          </li>
         </ul>
       `,
     },
@@ -233,24 +284,24 @@ export const DATA = {
       href: "#",
       badges: [],
       location: "Taipei, Taiwan",
-      title: "Software Intern",
+      title: "Software Engineering Intern",
       logoUrl: "resume/work/ponddy.png",
       start: "June 2020",
       end: "June 2021",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Backend</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Built a real-time Interactive Response System (IRS) — a live Q&A tool used by teachers in classrooms — using Django REST Framework and Django Channels, implementing 22 features with 98 tests.</li>
-              <li style="margin-bottom: 8px;">Developed E2E API automation test scripts and maintained four projects.</li>
-            </ul>
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;">
+            Developed a real-time interactive response system (IRS) using Django REST Framework and Django Channels, delivering 22 features and 98 test cases.
           </li>
-          <li style="margin-bottom: 10px;"><strong>DevOps</strong>
-            <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-              <li style="margin-bottom: 8px;">Used Docker and CircleCI to containerize services and streamline CI/CD processes.</li>
-            </ul>
+          <li style="margin-bottom: 8px;">
+            Developed API End-to-End (E2E) automated test scripts and assisted in maintaining API tests across four projects.
           </li>
-          <li style="margin-bottom: 10px;">Led manual testing efforts and trained junior testers in testing tools and flows.</li>
+          <li style="margin-bottom: 8px;">
+            Containerized services using Docker and established automated build and deployment pipelines with CircleCI.
+          </li>
+          <li style="margin-bottom: 8px;">
+            Performed manual product testing and feature workflow validation, and assisted in guiding new testers through product testing.
+          </li>
         </ul>
       `,
     },
@@ -263,26 +314,24 @@ export const DATA = {
       location: "Taipei, Taiwan",
       title: "Backend Engineer",
       logoUrl: "resume/work/xkernel.png",
-      start: "",
-      end: "",
-      description:`
-        <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.6;">
-          <li style="margin-bottom: 10px;">Developed and maintained backend services for a Taiwanese Hakka language corpus system
+      start: "March 2023",
+      end: "April 2025",
+      description: `
+        <ul style="list-style-type: disc; margin-left: 20px;">
+          <li style="margin-bottom: 10px;">Backend Development and Maintenance for the Taiwan Hakka Corpus System
             <ul style="list-style-type: disc; margin-left: 20px;">
-              <li style="margin-bottom: 8px;">Collaborated with the team to implement multiple Web APIs and maintain comprehensive documentation</li>
-              <li style="margin-bottom: 8px;">Integrated Google reCAPTCHA v3 to enhance security during user verification</li>
+              <li style="margin-bottom: 8px;">Collaborated with the team to implement multiple REST APIs and maintain comprehensive documentation.</li>
+              <li style="margin-bottom: 8px;">Integrated Google reCAPTCHA v3 to enhance verification security.</li>
             </ul>
           </li>
-          <li style="margin-bottom: 10px;">Developed backend APIs for an English-speaking learning system.</li>
-          <li style="margin-bottom: 10px;">Maintained and enhanced a taxi dispatch system that receives and consolidates order information from upstream vendors, then assigns orders to downstream partners or in-house taxi drivers
+          <li style="margin-bottom: 10px;">Backend Development and Maintenance for a Taxi Dispatch System: Integrated upstream order sources and dispatched orders to partner taxi companies or in-house drivers.
             <ul style="list-style-type: disc; margin-left: 20px;">
-              <li style="margin-bottom: 8px;">Developed and documented multiple Web APIs based on team requirements</li>
-              <li style="margin-bottom: 8px;">Customized Django Admin interfaces to support bulk driver assignment and order import/export from upstream vendors</li>
+              <li style="margin-bottom: 8px;">Collaborated with the team to implement multiple REST APIs and maintain comprehensive documentation.</li>
+              <li style="margin-bottom: 8px;">Customized Django Admin to support bulk order updates, driver assignment, and import/export of upstream and downstream orders.</li>
             </ul>
           </li>
-          <li style="margin-bottom: 10px;">Migrated legacy products to AWS EC2 for improved deployment and scalability</li>
+          <li style="margin-bottom: 10px;">Migrated an existing product to an AWS EC2 instance.</li>
         </ul>
-
       `,
     }
   ],

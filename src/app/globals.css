@@ -73,6 +73,84 @@
     body {
       @apply bg-background text-foreground;
     }
+
+    a:focus-visible,
+    button:focus-visible {
+      @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    }
+  }
+
+  .resume-section {
+    @apply scroll-mt-8;
+  }
+
+  .resume-heading {
+    @apply mb-5 border-b pb-2 text-xl font-bold tracking-tight;
+  }
+
+  .resume-link {
+    @apply text-foreground underline decoration-muted-foreground/50 underline-offset-4 transition-colors hover:decoration-foreground;
+  }
+
+  .resume-card {
+    @apply transition-colors hover:bg-muted/30;
+  }
+
+  .resume-description ul {
+    @apply my-2 list-disc space-y-1 pl-5;
+  }
+
+  .resume-description ul ul {
+    @apply my-1;
+  }
+
+  @media print {
+    @page {
+      margin: 12mm 14mm;
+    }
+
+    body {
+      @apply max-w-none bg-white px-0 py-0 text-sm text-black;
+    }
+
+    .resume-page {
+      gap: 2rem !important;
+      font-size: 0.875rem;
+      line-height: 1.45;
+    }
+
+    .resume-page [style] {
+      opacity: 1 !important;
+      filter: none !important;
+      transform: none !important;
+    }
+
+    .resume-page .resume-section {
+      break-inside: auto;
+    }
+
+    .resume-card {
+      @apply break-inside-avoid rounded-none border-0 border-b px-0 py-4 shadow-none transition-none;
+    }
+
+    .resume-card:hover {
+      background-color: transparent !important;
+    }
+
+    .resume-description {
+      height: auto !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+    }
+
+    .resume-description ul {
+      line-height: 1.45;
+    }
+
+    .resume-link {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 
   h3 code {
